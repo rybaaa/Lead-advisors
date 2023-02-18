@@ -1,0 +1,28 @@
+.footer{
+  height: 192px;
+  background: #162C4E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .input{
+    width: 440px;
+    height: 59px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+    border-radius: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-left: 27px;
+    .btn{
+      width: 43px;
+      height: 43px;
+      border-radius: 40px;
+      background: #DF2224;
+    }
+  }
+}
