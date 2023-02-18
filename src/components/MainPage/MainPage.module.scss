@@ -9,8 +9,16 @@
   .mainContainer{
     display: flex;
     justify-content: space-between;
+    position: relative;
     .mainBlock{
-      margin: 60px 0 76px;
+      position: absolute;
+      top:60px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      //width: 100px; /* Need a specific value to work */
+      //margin: 60px 0 76px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
