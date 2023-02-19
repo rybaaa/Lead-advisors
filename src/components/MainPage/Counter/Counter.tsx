@@ -8,7 +8,7 @@ export const Counter = () => {
     const [timerMinutes, setTimerMinutes] = useState('00')
     const [timerSeconds, setTimerSeconds] = useState('00')
 
-    const days = timerHours.length === 1 ? '0' + timerDays : timerDays
+    const days = timerDays.length === 1 ? '0' + timerDays : timerDays
     const hours = timerHours.length === 2 ? timerHours : '0' + timerHours
     const minutes = timerMinutes.length === 2 ? timerMinutes : '0' + timerMinutes
     const seconds = timerSeconds.length === 2 ? timerSeconds : '0' + timerSeconds
@@ -16,7 +16,7 @@ export const Counter = () => {
     let interval = useRef();
 
     const startTimer = () => {
-        const countDownDate = new Date('February 19 2023 22:00:00').getTime()
+        const countDownDate = new Date('May 31 2023 00:00:00').getTime()
         // @ts-ignore
         interval.current = setInterval(() => {
             const now = new Date().getTime()
