@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from '../MainPage/MainPage.module.scss'
 import left from '../../assets/images/left.svg'
 import right from '../../assets/images/right.svg'
@@ -8,6 +8,11 @@ import {Counter} from "./Counter/Counter";
 import {Footer} from "./Footer/Footer";
 
 export const MainPage = () => {
+    const [refresh, setRefresh] = useState(true)
+    const refreshPage = ()=>{
+        console.log('rest')
+        setRefresh(prevState => !prevState)
+    }
     return (
         <div className={s.wrapper}>
             <div className={s.mainContainer}>
@@ -15,7 +20,7 @@ export const MainPage = () => {
                     <img src={left} alt={'left wing background'}/>
                 </div>
                 <div className={s.mainBlock}>
-                    <img src={logo} alt={'logo'}/>
+                    <img className={s.logo} onClick={refreshPage} src={logo} alt={'logo'}/>
                     <h1 className={s.title}>
                         Under Construction
                     </h1>
@@ -25,7 +30,7 @@ export const MainPage = () => {
                     <Counter/>
                     <span className={s.btnHeader}>Check our event page when you wait:</span>
                     <button className={s.btn}>
-                        <span className={s.btnTitle}>Go to the event</span>
+                        <a target={'_blank'} href={'https://leadadvisors.org/'} className={s.btnTitle}>Go to the event</a>
                         <img src={arrowRight} alt={'right arrow'}/>
                     </button>
                 </div>

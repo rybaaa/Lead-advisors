@@ -43,7 +43,6 @@ export const Counter = () => {
             clearInterval(interval.current)
         }
     }, [])
-    console.log(new Date('May 31 2023 00:00:00').getTime())
     return (
         <div className={s.counterBlock}>
             <div>
