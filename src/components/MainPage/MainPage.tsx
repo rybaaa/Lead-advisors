@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import s from '../MainPage/MainPage.module.scss'
 import left from '../../assets/images/left.svg'
+import leftPads from '../../assets/images/left_pads.svg'
 import right from '../../assets/images/right.svg'
 import logo from '../../assets/images/logo.svg'
 import arrowRight from '../../assets/images/arrow-right.svg'
@@ -16,7 +17,7 @@ export const MainPage = () => {
     return (
         <div className={s.wrapper}>
             <div className={s.mainContainer}>
-                <div>
+                <div className={s.leftBlock}>
                     <img src={left} alt={'left wing background'}/>
                 </div>
                 <div className={s.mainBlock}>
