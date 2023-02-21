@@ -39,6 +39,10 @@
         color: #162C4E;
         opacity: 0.39;
         margin: 93px 0 8px;
+        @media screen and (max-width: 768px) {
+          font-size: 36px;
+          line-height: 37px;
+        }
       }
       .description{
         font-family: 'Poppins', sans-serif;
@@ -48,6 +52,10 @@
         line-height: 27px;
         color: rgba(0, 0, 0, 0.8);
         width: 423px;
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
       }
       .btnHeader{
         font-family: 'Poppins', sans-serif;
