@@ -4,7 +4,11 @@ import arrow from '../../../assets/images/arrow-right-input.svg'
 import {useFormik} from "formik";
 import * as yup from 'yup'
 
-export const Footer = () => {
+type FooterPropsType = {
+    setIsActive: (value:boolean) => void
+}
+
+export const Footer = (props:FooterPropsType) => {
     const validationSchema = yup.object({
         email: yup.string().email('Invalid email address').required('Email is required')
     })
@@ -14,7 +18,7 @@ export const Footer = () => {
         },
         validationSchema: validationSchema,
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            props.setIsActive(true)
         },
     });
     return (
